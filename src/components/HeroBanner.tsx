@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import LocationSelector from "./LocationSelector";
 import heroBanner from "@/assets/hero-banner.jpg";
+import { useNavigate } from "react-router-dom";
 
 const HeroBanner = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-[60vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -16,6 +20,11 @@ const HeroBanner = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto">
+          {/* Location Selector */}
+          <div className="flex justify-center mb-8">
+            <LocationSelector />
+          </div>
+          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
             Luxury
             <span className="block text-luxury-gold">Redefined</span>
@@ -29,6 +38,7 @@ const HeroBanner = () => {
               variant="luxury" 
               size="xl" 
               className="group"
+              onClick={() => navigate("/products")}
             >
               Shop Collection
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -36,6 +46,7 @@ const HeroBanner = () => {
             <Button 
               variant="glass" 
               size="xl"
+              onClick={() => navigate("/products")}
             >
               Explore Brands
             </Button>

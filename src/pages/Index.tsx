@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import ProductGrid from "@/components/ProductGrid";
 import BrandShowcase from "@/components/BrandShowcase";
+import Footer from "@/components/Footer";
 import BottomNavigation from "@/components/BottomNavigation";
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
         <ProductGrid />
         <BrandShowcase />
       </main>
+      <Footer />
       <BottomNavigation />
       {/* Add bottom padding to prevent content from hiding behind bottom navigation on mobile */}
       <div className="h-20 md:hidden" />
